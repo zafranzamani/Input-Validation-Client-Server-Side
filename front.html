@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2>Student Information Form</h2>
+
+<form id="myForm" action="form_handler.php" method="POST" onsubmit="return validateForm()">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Only letters and spaces are allowed" required><br>
+  
+  <label for="matricNo">Matric No:</label><br>
+  <input type="text" id="matricNo" name="matricNo" pattern="[0-9]+" title="Only numbers are allowed" required><br>
+  
+  <label for="currentAddress">Current Address:</label><br>
+  <textarea id="currentAddress" name="currentAddress" required></textarea><br>
+  
+  <label for="homeAddress">Home Address:</label><br>
+  <textarea id="homeAddress" name="homeAddress" required></textarea><br>
+  
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" required><br>
+  
+  <label for="mobilePhone">Mobile Phone No:</label><br>
+  <input type="text" id="mobilePhone" name="mobilePhone" pattern="[0-9]+" title="Only numbers are allowed" required><br>
+  
+  <label for="homePhone">Home Phone No:</label><br>
+  <input type="text" id="homePhone" name="homePhone" pattern="[0-9]+" title="Only numbers are allowed" required><br>
+  
+  <input type="submit" value="Submit">
+</form>
+
+<div id="error-msg"></div>
+
+<script src="js/validation.js"></script>
+</body>
+</html>
